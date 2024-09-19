@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Huella hidrica</title>
+    <title>Huella hidrica universidad santo tomas bucaramanga</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body background="calculadora/Images/HuellaBANNER.png" style="background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
@@ -18,13 +18,13 @@
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-2">
-                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="Recomendaciones()" data-bs-toggle="modal" data-bs-target="#exampleModal"> RECOMENDACIONES</button>
+                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="Recomendaciones()" data-bs-toggle="modal" data-bs-target="#exampleModal"> RECOMENDACIÓN</button>
                 </div>
                 <div class="col-md-2">
                     <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="tiposHuellas()" data-bs-toggle="modal" data-bs-target="#exampleModal"> TIPOS DE HUELLAS</button>
                 </div>
                 <div class="col-md-3" style="text-align:center">
-                  <h4>HUELLA HIDRICA AGRICOLA</h4>
+                  <h4>HUELLA HÍDRICA AGRÍCOLA</h4>
                 </div>
                 <div class="col-md-2">
                     <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="queEs()" data-bs-toggle="modal" data-bs-target="#exampleModal">¿QUE ES?</button>
@@ -42,12 +42,29 @@
             <form class="row needs-validation was-validated" id="formCalcular" novalidate="">
                 <br>
                 <br>
-              <div class="row">
-                <h3 style="text-align:center"> CALCULA TU HUELLA HIDRICA</h3>
-                <h4 style="text-align:center"> Pon tus datos aquí</h4>
+              <div style="padding: 1%;" class="row">
+                <div class="col-md-12">
+                    <h3 style="text-align:center"> CALCULA TU HUELLA HÍDRICA</h3>
+                </div>                
+                <div class="col-md-12">
+                    <h5 style="text-align:center">Usando el método de Arjen Hoekstra padre del cálculo de la huella hídrica.</h5>
+                </div>
+                
+                <div class="col-md-3"></div>
+                <div class="col-md-1" style="text-align: right;">
+                    <img style="width: 50%;" src="calculadora/Images/icoDown.png" alt="">                    
+                </div> 
+                <div class="col-md-3">                    
+                    <h4 style="text-align:center"> Pon tus datos aquí</h4>          
+                </div>
+                <div class="col-md-1">
+                    <img style="width: 50%;" src="calculadora/Images/icoDown.png" alt="">                    
+                </div> 
+                
               </div>
               <br>
-              <div class="row">
+              <br>
+              <div style="padding: 1%;" class="row">
                 <div class="col-md-8" style="margin-left: 5%;">
                     <div class="row">
                         <div class="col-md-2">
@@ -57,23 +74,23 @@
                             <!-- <input type="text" style="width: -moz-available;">     -->
                             <select class="form-control" id="cbxUbicacion" name="cbxUbicacion" required="">
                                 <option selected="" disabled="" value="">Selecciona una ubicación</option>
-                                <option value="1">suratá</option>
+                                <option value="1">Suratá</option>
                                 <option value="2">Santa Rosa</option>
                                 <option value="3">Mesalla</option>
                                 <option value="4">El Centro</option>
                                 <option value="5">San Isidro</option>
-                                <option value="6">El Mineral</option>
-                                <option value="7">Barbosa</option>
-                                <option value="8">Las Abejas</option>
-                                <option value="9">Cartagena</option>
-                                <option value="10">El Playón</option>
-                                <option value="11">Rionegro</option>
-                                <option value="12">Matanza</option>
-                                <option value="13">California</option>
+                                <option value="6"> El Mineral</option>
+                                <option value="7">Las Abejas</option>
+                                <option value="8">Cartagena</option>
+                                <option value="9">El Playón</option>
+                                <option value="10">Rionegro</option>
+                                <option value="11">Matanza</option>
+                                <option value="12">California</option>
+                                <option value="13">Vetas</option>
                                 <option value="14">Tona</option>
                                 <option value="15">Charta</option>
-                                <option value="16">area metropolitanaBucaramanga</option>
-                            </select>
+                                <option value="16">area metropolitana de bucaramanga</option>
+                                </select>
                             <div class="invalid-feedback">
                                 Seleciona una ubicación
                             </div> 
@@ -290,7 +307,17 @@
                 </div>
               </div>    
               <br>                      
-            </form>           
+            </form> 
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-3">
+                    <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
+                </div>
+                <div class="col-md-5" style="text-align: left;">
+                    <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
+                </div>
+            </div>            
         </div>       
     </div>    
     <div class="container" id="divContactanos"  style="background: #f0ffff5e;">
@@ -330,7 +357,7 @@
                         <textarea id="story" name="story" rows="5" cols="33" style="width: -moz-available;">                       
                         </textarea>
                     </div>
-                </div>
+                </div>                
                 <br>
                 <div class="row" style="text-align:center">                    
                     <div class="col-md-6">
@@ -345,15 +372,25 @@
                     <img src="calculadora/Images/imgContactanos.png"  alt="">
                 </div>
             </div>           
-        </div>            
+        </div>      
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-3">
+                <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
+            </div>
+            <div class="col-md-5" style="text-align: left;">
+                <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
+            </div>
+        </div>     
     </div>
     <div class="container-fluid" id="divResultado" >
         <div class="container" style="text-align: center; background: #f0ffff5e;">
-            <h3>Resultado de tu huella hidirica</h3>
+            <h3>Resultado de tu huella hídrica</h3>
             <br>
             <div class="row">
                 <div class="col-md-2">
-                    <label for="">Resultado huella hidrica total:</label>
+                    <label for="">Resultado huella hídrica total:</label>
                    
                     <!-- <span id="spanResultado"></span> -->
                 </div>
@@ -367,7 +404,7 @@
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <label for="">Resultado huella hidrica azul</label>
+                    <label for="">Resultado huella hídrica azul</label>
                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                         <div id="progressAzul" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
                     </div>
@@ -378,7 +415,7 @@
                     <span id="porcentajeAzul"></span>
                 </div>
                 <div class="col-md-4">
-                    <label for="">Resultado huella hidrica verde</label>
+                    <label for="">Resultado huella hídrica verde</label>
                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                         <div id="progressVerde" class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 100%"></div>
                     </div>
@@ -391,7 +428,7 @@
                     
                 </div>
                 <div class="col-md-4">
-                    <label for="">Resultado huella hidrica gris</label>
+                    <label for="">Resultado huella hídrica gris</label>
                     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                         <div id="progressGris" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; background-color: gray;"></div>
                     </div>
@@ -403,7 +440,25 @@
                 </div>
             </div>
             <br>
-            <button type="button" class="btn btn-outline-secondary" onclick="volver()">Vover  <img src="calculadora/Images/Back.png" alt=""></button>
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <button type="button" style="border: black;" class="btn btn-outline-secondary" onclick="volver()"> <strong>Vover</strong>   <img src="calculadora/Images/Back.png" alt=""></button>
+                </div>
+                <div class="col-md-3">
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-3">
+                    <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
+                </div>
+                <div class="col-md-5" style="text-align: left;">
+                    <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
+                </div>
+            </div>            
             <br>
         </div>            
     </div>
@@ -416,8 +471,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <div id="contentModal">
-                    
+                <div id="contentModal">                    
                 </div>               
             </div>
             <div class="modal-footer">
