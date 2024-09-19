@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Huella hidrica</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body background="calculadora/Images/HuellaBANNER.png" style="background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <div class="container-xl" style="background: #f0ffff5e;">
+            <br>
+            <div class="row"> 
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="Recomendaciones()" data-bs-toggle="modal" data-bs-target="#exampleModal"> RECOMENDACIONES</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="tiposHuellas()" data-bs-toggle="modal" data-bs-target="#exampleModal"> TIPOS DE HUELLAS</button>
+                </div>
+                <div class="col-md-3" style="text-align:center">
+                  <h4>HUELLA HIDRICA AGRICOLA</h4>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="queEs()" data-bs-toggle="modal" data-bs-target="#exampleModal">¿QUE ES?</button>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-light"  style="background: #f0ffff5e;" onclick="contactanos()"> CONTACTANOS</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+    <div class="container-fluid" id="divPrincipal" >
+        <div class="container" style="background: #f0ffff5e;">
+            <form class="row needs-validation was-validated" id="formCalcular" novalidate="">
+                <br>
+                <br>
+              <div class="row">
+                <h3 style="text-align:center"> CALCULA TU HUELLA HIDRICA</h3>
+                <h4 style="text-align:center"> Pon tus datos aquí</h4>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-8" style="margin-left: 5%;">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label for="">Ubicación:</label>            
+                        </div>
+                        <div class="col-md-3">
+                            <!-- <input type="text" style="width: -moz-available;">     -->
+                            <select class="form-control" id="cbxUbicacion" name="cbxUbicacion" required="">
+                                <option selected="" disabled="" value="">Selecciona una ubicación</option>
+                                <option value="1">suratá</option>
+                                <option value="2">Santa Rosa</option>
+                                <option value="3">Mesalla</option>
+                                <option value="4">El Centro</option>
+                                <option value="5">San Isidro</option>
+                                <option value="6">El Mineral</option>
+                                <option value="7">Barbosa</option>
+                                <option value="8">Las Abejas</option>
+                                <option value="9">Cartagena</option>
+                                <option value="10">El Playón</option>
+                                <option value="11">Rionegro</option>
+                                <option value="12">Matanza</option>
+                                <option value="13">California</option>
+                                <option value="14">Tona</option>
+                                <option value="15">Charta</option>
+                                <option value="16">area metropolitanaBucaramanga</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Seleciona una ubicación
+                            </div> 
+                        </div>
+                        <div class="col-md-1">
+                       
+                        </div> 
+                        <div class="col-md-2">
+                            <label for="cbxSuelo">Tipo de suelo:</label>  
+                        </div>
+                        <div class="col-md-3 position-relative">
+                            <select class="form-control" id="cbxSuelo" name="cbxSuelo" required="">
+                                <option selected="" disabled="" value="">Seleciona tipo de suelo</option>
+                                <option value="0">Arenoso</option>
+                                <option value="1">Franco Arenoso</option>
+                                <option value="2">Franco Arenoso Limoso</option>
+                                <option value="3">Franco</option>
+                                <option value="4">Franco Arcilloso</option>
+                                <option value="5">Limoso</option>
+                                <option value="6">Arcilloso</option>
+                                <option value="7">Franco Limoso</option>
+                                <option value="8">Franco Arcilloso Arenoso</option>
+                                <option value="9">Franco Arsilloso limoso</option>
+                                <option value="10">Arsilloso Limoso</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                seleciona un tipo de suelo
+                            </div> 
+                        </div>
+                        <div class="col-md-1">
+                       
+                        </div> 
+                    </div>
+                    <br>
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label for="cbxProducto">Producto:</label> 
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <select class="form-control" id="cbxProducto" required="" change-value="">
+                            <option selected="" disabled="" value="">Seleciona un producto</option>
+                            <option value="0">Brocoli</option>
+                            <option value="1">Col de bruselas</option>
+                            <option value="2">Repollo</option>
+                            <option value="3">Zanahoria</option>
+                            <option value="4">Coliflor</option>
+                            <option value="5">Apio</option>
+                            <option value="6">Ajo</option>
+                            <option value="7">Lechuga</option>
+                            <option value="8">Cebolla seca</option>
+                            <option value="9">Cebolla verde</option>
+                            <option value="10">Cebolla semilla</option>
+                            <option value="11">Espinaca</option>
+                            <option value="12">Rábano</option>
+                            <option value="13">Berejena</option>
+                            <option value="14">Pimiento dulce</option>
+                            <option value="15">Tomate</option>
+                            <option value="16">Melon</option>
+                            <option value="17">pepino cosechado fresco</option>
+                            <option value="18">Pepino cosechado a maquina</option>
+                            <option value="19">Calabaza de invierno</option>
+                            <option value="20">Calabacin (zucchini)</option>
+                            <option value="21">Melon dulce</option>
+                            <option value="22">Sandia</option>
+                            <option value="23">Remolacha</option>
+                            <option value="24">Yuca o mandioca 1 año</option>
+                            <option value="25">Yuca o mandioca 2 año</option>
+                            <option value="26">Chirivia</option>
+                            <option value="27">Patata o papa</option>
+                            <option value="28">Camote o batata</option>
+                            <option value="29">Nabos(rutabaga)</option>
+                            <option value="30">Remolacha azucarera</option>
+                            <option value="31">Frijoles o judías, verdes </option>
+                            <option value="32">Frijoles de judías, secos y frescos  </option>
+                            <option value="33">Garbanzo</option>
+                            <option value="34">Habas fresco</option>
+                            <option value="35">Habas seco/ semilla</option>
+                            <option value="36">Garbanzo hindú</option>
+                            <option value="37">Caupis (cowpeas)</option>
+                            <option value="38">Maní </option>
+                            <option value="39">Lentejas </option>
+                            <option value="40">Guisantes o arvejas frescos </option>
+                            <option value="41">Soya</option>
+                            <option value="42">Alcachofa </option>
+                            <option value="43">Espárragos</option>
+                            <option value="44">Menta  </option>
+                            <option value="45">Fresas  </option>
+                            <option value="46">Algodón </option>
+                            <option value="47">Lino </option>
+                            <option value="48">Sisal </option>
+                            <option value="49">Ricino</option>
+                            <option value="50">Canola</option>
+                            <option value="51">Cebada</option>
+                            <option value="52">Avena</option>
+                        </select>                                           
+                        <div class="invalid-feedback">
+                            seleciona un producto
+                        </div>                      
+                    </div>
+                    <div class="col-md-1">
+                       
+                    </div> 
+                    <div class="col-md-2">
+                        <label for="txtProfund">Profundidad:</label> 
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="text" class="form-control" id="txtProfund" style="width: -moz-available;" disabled>
+                        
+                        <div class="invalid-feedback">
+                            Ingrese la profundidad
+                        </div>
+                    </div>  
+                    <div class="col-md-1">
+                        <label for="m">m</label>
+                    </div>         
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label for="txtFecha">Fecha de cosecha:</label>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="date" class="form-control" id="txtFecha" style="width: -moz-available;" required="">
+                        <div class="invalid-feedback">
+                            Ingrese una fecha
+                        </div>
+                    </div>  
+                    <div class="col-md-1">
+                       
+                    </div> 
+                    <div class="col-md-2">
+                        <label for="cbxFertilizante">Tipo fertilizante:</label>  
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <select class="form-control" id="cbxFertilizante" required="">
+                            <option selected="" disabled="" value="">Seleciona el fertilizante</option>
+                            <option value="2">Nitrogeno</option>
+                            <option value="3">Fosforo</option>
+                            <option value="4">Pesticidas</option>
+                            <option value="5">Insecticidas</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            seleciona el fertilizante
+                        </div>  
+                    </div>
+                    <div class="col-md-1">
+                       
+                    </div> 
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label for="txtDistancia">Distancia entre surcos:</label>                        
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="number" class="form-control" id="txtDistanciasurcos" style="width: -moz-available;" required="">
+                        
+                        <div class="invalid-feedback">
+                            Ingrese la distancia
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="cm">cm</label>
+                    </div> 
+                    <div class="col-md-2">
+                        <label for="txtCantidadfertilizante">Cantidad de fertilizante:</label> 
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="number" class="form-control" id="txtCantidadfertilizante" style="width: -moz-available;" required="">
+                       
+                        <div class="invalid-feedback">
+                            Ingrese la cantidad
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="kg/ha">kg/ha</label>
+                    </div> 
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-2">
+                        <label for="txtDistanciaPlantas">Distancia entre plantas:</label>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="number" class="form-control" id="txtDistanciaPlantas" style="width: -moz-available;" required="">
+                       
+                        <div class="invalid-feedback">
+                            Ingrese la distancia
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="cm">cm</label>
+                    </div> 
+                    <div class="col-md-2">
+                        <label for="txtCantidadTerre">Cantidad de terreno:</label> 
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <input type="number" class="form-control" id="txtCantidadTerre" style="width: -moz-available;" required="">
+                        <div class="invalid-feedback">
+                            Ingrese la cantidad
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="m²">m²</label>
+                    </div> 
+                  </div>    
+                  <br>
+                </div>
+                <div class="col-md-1" style="align-self: center;">                  
+                    <button type="button" id="btnGenerar" class="btn btn-light" style="background: #f0ffff5e;" onclick="generar()">
+                        <img src="calculadora/Images/pngegg.png" height ="100" width="100" alt="">
+                        <label for="btnGenerar">Generar</label>
+                    </button>
+                </div>
+              </div>    
+              <br>                      
+            </form>           
+        </div>       
+    </div>    
+    <div class="container" id="divContactanos"  style="background: #f0ffff5e;">
+        <div class="row">
+            <div class="col-md-5" style="margin-top: 10%; margin-left: 10%;">
+                <br>
+                <div class="row">
+                    <div class="col-md-6" style="text-align:center">
+                        <strong><h3>CONTACTANOS</h3></strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="">NOMBRE</label>
+                        <br>
+                        <input type="text" style="width: -moz-available;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">APELLIDO</label>
+                        <br>
+                        <input type="text" style="width: -moz-available;">
+                    </div>
+                </div> 
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">EMAIL</label>
+                        <br>
+                        <input type="email" style="width: -moz-available;">
+                    </div>
+                </div> 
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Estamos para mejorar! danos tu opinion.</label>
+                        <br>
+                        <textarea id="story" name="story" rows="5" cols="33" style="width: -moz-available;">                       
+                        </textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row" style="text-align:center">                    
+                    <div class="col-md-6">
+                        <button type="button" id="btnEnviar" class="btn btn-light" style="background: #f0ffff5e;">Enviar</button>
+                        <button type="button" id="btnCancelEnvio" onclick="cancelEnvio()" class="btn btn-light" style="background: #f0ffff5e;">Cancelar</button>
+                    </div>
+                </div>
+                <br>    
+            </div> 
+            <div class="col-md-4">
+                <div class="row">
+                    <img src="calculadora/Images/imgContactanos.png"  alt="">
+                </div>
+            </div>           
+        </div>            
+    </div>
+    <div class="container-fluid" id="divResultado" >
+        <div class="container" style="text-align: center; background: #f0ffff5e;">
+            <h3>Resultado de tu huella hidirica</h3>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="">Resultado huella hidrica total:</label>
+                   
+                    <!-- <span id="spanResultado"></span> -->
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" id="spanResultado" disabled>
+                </div>
+                <div class="col-md-6">
+                    <span id="spanResultadoTexto"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="">Resultado huella hidrica azul</label>
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div id="progressAzul" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%"></div>
+                    </div>
+                    <span id="resultadoAzul"></span>
+                    <br>
+                    <span id="TotalLitros"></span>
+                    <br>
+                    <span id="porcentajeAzul"></span>
+                </div>
+                <div class="col-md-4">
+                    <label for="">Resultado huella hidrica verde</label>
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div id="progressVerde" class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 100%"></div>
+                    </div>
+                    <span id="resultadoVerde"></span>
+                    <br>
+                    <span id="TotalLitrosverde"></span>
+                    <br>
+                    <span id="porcentajeVerde"></span>
+                    <br>
+                    
+                </div>
+                <div class="col-md-4">
+                    <label for="">Resultado huella hidrica gris</label>
+                    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                        <div id="progressGris" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; background-color: gray;"></div>
+                    </div>
+                    <span id="resultadoGris"></span>
+                    <br>
+                    <span id="TotalLitrosgris"></span>
+                    <br>
+                    <span id="porcentajeGris"></span>
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-outline-secondary" onclick="volver()">Vover  <img src="calculadora/Images/Back.png" alt=""></button>
+            <br>
+        </div>            
+    </div>
+    <!-- Modal recomendaciones-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="contentTitleModal">
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="contentModal">
+                    
+                </div>               
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <script src="calculadora/Funciones.js"></script>
+  </body>
+</body>
+</html>
