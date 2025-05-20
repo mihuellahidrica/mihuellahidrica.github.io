@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  footer {
+    width: 100%;
+    background-color: #333; /* Puedes cambiar el color */
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Ajusta el padding si lo necesitas */
+    position: relative;
+    bottom: 0;
+    
+  }
+  .whatsapp-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* forma redonda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.1); /* agranda ligeramente */
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4); /* sombra verde */
+  }
+  .recomendacion-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recomendacion-img:hover {
+    transform: scale(1.05);
+}
+
+.recomendacion-container {
+    padding: 15px;
+    text-align: center;
+}
+.recomendacion-container {
+  padding: 10px;
+}
+
+.recomendacion-img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
