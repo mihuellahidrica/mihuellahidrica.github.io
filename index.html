@@ -7,6 +7,7 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Huella hidrica universidad santo tomas bucaramanga</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body background="calculadora/Images/HuellaBANNER.png" style="background-repeat: no-repeat;background-attachment: fixed; background-size: cover;">
     <div class="container-fluid">
@@ -75,21 +76,39 @@
                             <select class="form-control" id="cbxUbicacion" name="cbxUbicacion" required="">
                                 <option selected="" disabled="" value="">Selecciona una ubicación</option>
                                 <option value="1">Suratá</option>
-                                <option value="2">Santa Rosa</option>
-                                <option value="3">Mesalla</option>
-                                <option value="4">El Centro</option>
-                                <option value="5">San Isidro</option>
-                                <option value="6"> El Mineral</option>
-                                <option value="7">Las Abejas</option>
-                                <option value="8">Cartagena</option>
-                                <option value="9">El Playón</option>
-                                <option value="10">Rionegro</option>
-                                <option value="11">Matanza</option>
-                                <option value="12">California</option>
-                                <option value="13">Vetas</option>
-                                <option value="14">Tona</option>
-                                <option value="15">Charta</option>
-                                <option value="16">area metropolitana de bucaramanga</option>
+                                <option value="2">Suratá-Bucaré</option>
+                                <option value="3">Suratá-Nueva vereda</option>
+                                <option value="4">Suratá-El pachal</option>
+                                <option value="6">Suratá-Porvenir</option>
+                                <option value="7">Suratá-Cartagua</option>
+                                <option value="8">Suratá-Aguablanca</option>
+                                <option value="9">Suratá-Báchiga</option>
+                                <option value="10">Suratá-Páramo de Monsalve</option>
+                                <option value="11">Santa Rosa</option>
+                                <option value="12">Mesalla</option>
+                                <option value="13">El Centro-Charta</option>
+                                <option value="14">San Isidro</option>
+                                <option value="15"> El Mineral</option>
+                                <option value="16">Las Abejas-Chartas</option>
+                                <option value="17">El Playón</option>
+                                <option value="18">Rionegro</option>
+                                <option value="19">Matanza</option>
+                                <option value="19">Matanza-Báchiga</option>
+                                <option value="20">Matanza-Bulcaré</option>
+                                <option value="21">Matanza-Santa Bárbara *(incluye Salado)</option>
+                                <option value="22">Matanza-Ovejera</option>
+                                <option value="23">Matanza-La Cabrera (incluye Guamal)</option>
+                                <option value="24">California</option>
+                                <option value="25">Vetas</option>
+                                <option value="26">Tona</option>
+                                <option value="27">Charta</option>
+                                <option value="28">Charta-Caña</option>
+                                <option value="29">Charta-Carbonal</option>
+                                <option value="30">Charta-Cristalina</option>
+                                <option value="31">Charta-El Roble</option>
+                                <option value="32">Charta- La Playa</option>
+                                <option value="33">Charta- Ovejera</option>
+                                <option value="34">area metropolitana de bucaramanga</option>
                                 </select>
                             <div class="invalid-feedback">
                                 Seleciona una ubicación
@@ -113,8 +132,8 @@
                                 <option value="6">Arcilloso</option>
                                 <option value="7">Franco Limoso</option>
                                 <option value="8">Franco Arcilloso Arenoso</option>
-                                <option value="9">Franco Arsilloso limoso</option>
-                                <option value="10">Arsilloso Limoso</option>
+                                <option value="9">Franco Arcilloso limoso</option>
+                                <option value="10">Arcilloso Limoso</option>
                             </select>
                             <div class="invalid-feedback">
                                 seleciona un tipo de suelo
@@ -145,7 +164,7 @@
                             <option value="10">Cebolla semilla</option>
                             <option value="11">Espinaca</option>
                             <option value="12">Rábano</option>
-                            <option value="13">Berejena</option>
+                            <option value="13">Berenjena</option>
                             <option value="14">Pimiento dulce</option>
                             <option value="15">Tomate</option>
                             <option value="16">Melon</option>
@@ -210,7 +229,7 @@
                   <br>
                   <div class="row">
                     <div class="col-md-2">
-                        <label for="txtFecha">Fecha de cosecha:</label>
+                        <label for="txtFecha">Fecha de Siembra:</label>
                     </div>
                     <div class="col-md-3 position-relative">
                         <input type="date" class="form-control" id="txtFecha" style="width: -moz-available;" required="">
@@ -222,18 +241,51 @@
                        
                     </div> 
                     <div class="col-md-2">
-                        <label for="cbxFertilizante">Tipo fertilizante:</label>  
+                        <label for="cbxComponenteQuimico">Componente Quimico:</label>  
                     </div>
                     <div class="col-md-3 position-relative">
-                        <select class="form-control" id="cbxFertilizante" required="">
-                            <option selected="" disabled="" value="">Seleciona el fertilizante</option>
-                            <option value="2">Nitrogeno</option>
-                            <option value="3">Fosforo</option>
-                            <option value="4">Pesticidas</option>
-                            <option value="5">Insecticidas</option>
+                        <select class="form-control" id="cbxComponenteQuimico" required="">
+                            <option selected="" disabled="" value="">Selecciona el Componente</option>
+                            <option value="0">Aluminio</option>
+                            <option value="1">Arsénico</option>
+                            <option value="2">Berilio</option>
+                            <option value="3">Cadmio</option>
+                            <option value="4">Zinc</option>
+                            <option value="5">Cobalto</option>
+                            <option value="6">Cobre</option>
+                            <option value="7">Cromo</option>
+                            <option value="8">Flúor</option>
+                            <option value="9">Hierro</option>
+                            <option value="10">Litio</option>
+                            <option value="11">Manganeso</option>
+                            <option value="12">Molibdeno</option>
+                            <option value="13">Níquel</option>
+                            <option value="14">Plomo</option>
+                            <option value="15">Vanadio</option>
+                            <option value="16">Selenio</option>
+                            <option value="17">Boro</option>
+                            <option value="18">Fenoles Totales</option>
+                            <option value="19">Hidrocarburos Totales</option>
+                            <option value="20">Cianuro Libre</option>
+                            <option value="21">Cloruros</option>
+                            <option value="22">Fluoruros</option>
+                            <option value="23">Sulfatos</option>
+                            <option value="24">Mercurio</option>
+                            <option value="25">Sodio</option>
+                            <option value="26">Antimonio</option>
+                            <option value="27">Cloro Total Residual (con mínimo 30 minutos de contacto)</option>
+                            <option value="28">Nitratos</option>
+                            <option value="29">Demanda bioquímica de oxígeno (DBO5)</option>
+                            <option value="30">Solidos suspendidos totales (SST)</option>
+                            <option value="31">Aceites y Grasas</option>
+                            <option value="32">Mercurio-Metales pesados</option>
+                            <option value="33">Plomo-Metales pesados</option>
+                            <option value="34">Cromo-Metales pesados</option>
+                            <option value="35">Nitrógeno total</option>
+                            <option value="36">Fósforo total</option>
                         </select>
                         <div class="invalid-feedback">
-                            seleciona el fertilizante
+                            seleciona el componente quimico 
                         </div>  
                     </div>
                     <div class="col-md-1">
@@ -243,17 +295,17 @@
                   <br>
                   <div class="row">
                     <div class="col-md-2">
-                        <label for="txtDistancia">Distancia entre surcos:</label>                        
+                        <label for="txtDistancia">Cantidad de Terreno:</label>                        
                     </div>
                     <div class="col-md-3 position-relative">
                         <input type="number" class="form-control" id="txtDistanciasurcos" style="width: -moz-available;" required="">
                         
                         <div class="invalid-feedback">
-                            Ingrese la distancia
+                            Ingrese la cantidad
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <label for="cm">cm</label>
+                        <label for="cm">ha</label>
                     </div> 
                     <div class="col-md-2">
                         <label for="txtCantidadfertilizante">Cantidad de fertilizante:</label> 
@@ -272,30 +324,19 @@
                   <br>
                   <div class="row">
                     <div class="col-md-2">
-                        <label for="txtDistanciaPlantas">Distancia entre plantas:</label>
+                        <label for="txtDistanciaPlanta">Cantidad de Producto:</label>
                     </div>
                     <div class="col-md-3 position-relative">
-                        <input type="number" class="form-control" id="txtDistanciaPlantas" style="width: -moz-available;" required="">
+                        <input type="number" class="form-control" id="txtDistanciaPlanta" style="width: -moz-available;" required="">
                        
                         <div class="invalid-feedback">
-                            Ingrese la distancia
+                            Ingrese la Cantidad
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <label for="cm">cm</label>
+                        <label for="cm">Kg</label>
                     </div> 
-                    <div class="col-md-2">
-                        <label for="txtCantidadTerre">Cantidad de terreno:</label> 
-                    </div>
-                    <div class="col-md-3 position-relative">
-                        <input type="number" class="form-control" id="txtCantidadTerre" style="width: -moz-available;" required="">
-                        <div class="invalid-feedback">
-                            Ingrese la cantidad
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <label for="m²">m²</label>
-                    </div> 
+                  
                   </div>    
                   <br>
                 </div>
@@ -308,16 +349,7 @@
               </div>    
               <br>                      
             </form> 
-            <div class="row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-3">
-                    <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
-                </div>
-                <div class="col-md-5" style="text-align: left;">
-                    <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
-                </div>
-            </div>            
+                   
         </div>       
     </div>    
     <div class="container" id="divContactanos"  style="background: #f0ffff5e;">
@@ -373,16 +405,7 @@
                 </div>
             </div>           
         </div>      
-        <div class="row">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-3">
-                <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
-            </div>
-            <div class="col-md-5" style="text-align: left;">
-                <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
-            </div>
-        </div>     
+         
     </div>
     <div class="container-fluid" id="divResultado" >
         <div class="container" style="text-align: center; background: #f0ffff5e;">
@@ -402,6 +425,10 @@
                 </div>
             </div>
             <br>
+            <div> 
+                <div class="row">
+                    <div class="col-md-4">
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <label for="">Resultado huella hídrica azul</label>
@@ -440,11 +467,31 @@
                 </div>
             </div>
             <br>
+            <!-- recomendaciones -->
+        <!-- Recomendaciones con estilo -->
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 recomendacion-container">
+                <img id="imgRecomendacion" src="calculadora/Images/pngegg.png" alt="Recomendación 1" class="recomendacion-img">
+            </div>
+            <!-- div class="col-md-3 col-sm-6 recomendacion-container">
+                <img src="calculadora/Images/recomendacion2.png" alt="Recomendación 2" class="recomendacion-img">
+            </div>
+            <div class="col-md-3 col-sm-6 recomendacion-container">
+                <img src="calculadora/Images/recomendacion3.png" alt="Recomendación 3" class="recomendacion-img">
+            </div>
+            <div class="col-md-3 col-sm-6 recomendacion-container">
+                <img src="calculadora/Images/recomendacion4.png" alt="Recomendación 4" class="recomendacion-img">
+            </div> -->
+             
+         </div>
+             
+        <!--botton de volver-->
             <div class="row">
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-6">
-                    <button type="button" style="border: black;" class="btn btn-outline-secondary" onclick="volver()"> <strong>Vover</strong>   <img src="calculadora/Images/Back.png" alt=""></button>
+                    <button type="button" style="border: black;" class="btn btn-outline-secondary" onclick="volver()"> <strong>Volver</strong>   <img src="calculadora/Images/Back.png" alt=""></button>
                 </div>
                 <div class="col-md-3">
                 </div>                
@@ -452,13 +499,7 @@
             <div class="row">
                 <div class="col-md-4">
                 </div>
-                <div class="col-md-3">
-                    <h5 style="text-align: right; padding-top: 8%;">Derechos reservados por:</h5>
-                </div>
-                <div class="col-md-5" style="text-align: left;">
-                    <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="" style="width: 60%;">
-                </div>
-            </div>            
+              </div>            
             <br>
         </div>            
     </div>
@@ -482,6 +523,32 @@
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
    <script src="calculadora/Funciones.js"></script>
-  </body>
+<br>
+<!--aqui incia el footer-->
+<footer class="container-fluid py-4 text-center" style="background-color: rgba(255, 255, 255, 0.566); color: #1a1a1a;">
+    <div class="row text-center text-md-left justify-content-center">
+      <!-- Logo y frase -->
+      <div class="col-md-4 mb-3">
+        <img src="calculadora/Images/santo-tomas-bucaramanga.png" alt="Logo de la institucion" width="180" height="80" class="mb-2">
+        <p class="mb-0 fst-italic">"Calcula, comprende y cuida: tu huella hídrica importa."</p>
+      </div>
+  
+      <!-- Contacto -->
+     <div class="col-md-3 mb-3">
+        <h4 class="mb-3 text-primary">Contáctanos</h4>
+        <p class="mb-1"><strong>Correo:</strong> Slendy.velandia@ustabuca.edu.co</p>
+        <p class="mb-1"><strong>Teléfono:</strong> +57 3178025811</p>
+          <!--logo de redes sociales -->
+          <a href="https://wa.me/+573178025811?text=Hola,%20estoy%20interesado%20en%20tus%20productos!" 
+          target="_blank" aria-label="WhatsApp" class="mx-2 d-inline-block">
+         <img src="calculadora/Images/whap.png" alt="WhatsApp" class="whatsapp-icon">
+       </a>     
+        </div>   
+    </div>  
+    <div class="text-center mt-3">
+      <p class="mb-0" style="font-size: 0.9rem;">&copy; 2024 Todos los derechos reservados por: Slendy Velandia / SlendyArt</p>
+    </div>
+  </footer>
 </body>
 </html>
+  
