@@ -57,4 +57,66 @@ body, html {
     grid-template-rows: repeat(1, 1fr);
     gap: 21px;
 }
-        
+.mi-boton {
+    border: 2px solid #6c757d; /* Color secundario Bootstrap */
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.mi-boton:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+.mi-boton img {
+    width: 20px;
+    height: 20px;
+}
+.accordion {
+    border-radius: 16px;
+    padding: 20px;
+    background: rgba(240, 255, 244, 0.5); /* verde muy claro translúcido */
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.1); /* sombra verde */
+}
+
+.accordion-item {
+    background: #f5fcf7; /* fondo suave dentro del acordeón */
+    border: 1px solid #c8e6c9; /* borde verde claro */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    transition: transform 0.2s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+}
+
+.accordion-button {
+    background: transparent;
+    color: #2e7d32; /* verde bosque */
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e8f5e9; /* verde claro */
+    color: #1b5e20;
+}
+
+.accordion-body {
+    background: #f1f8f4; /* fondo claro solo para el cuerpo */
+    color: #2e7d32;
+    padding: 18px;
+    font-size: 15px;
+    border-top: 1px solid #cce3d3;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}

@@ -220,7 +220,7 @@ function generar() {
     }
 
     if(huellaverde<huellaAzul){
-        document.getElementById('item2').hidden = false;
+        document.getElementById('item').hidden = false;
     }
     
 }
