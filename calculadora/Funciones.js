@@ -201,6 +201,8 @@ function generar() {
     huellaAzul = Number(huellaAzul.toFixed(2));
     huellaverde = Number(huellaverde.toFixed(2));
     huellagris = Number(huellagris.toFixed(2));
+    document.getElementById('item1').hidden = true;
+    document.getElementById('item2').hidden = true;
     document.getElementById('divResultado').hidden = false;
     document.getElementById('divPrincipal').hidden = true;
     document.getElementById('resultadoAzul').innerHTML = 'Total: ' + huellaAzul + '   ha/m3';
@@ -208,6 +210,19 @@ function generar() {
     document.getElementById('resultadoGris').innerHTML = 'Total: ' + huellagris + '   ha/m3';
     document.getElementById('spanResultado').innerHTML = '' + huellatotal + '   ha/m3';
     document.getElementById("spanResultado").value = huellatotal + '   ha/m3';
+
+    if(huellagris>0){
+        document.getElementById('item1').hidden = false;
+    }
+
+    if(huellaAzul>huellagris){
+        document.getElementById('item2').hidden = false;
+    }
+
+    if(huellaverde<huellaAzul){
+        document.getElementById('item2').hidden = false;
+    }
+    
 }
 
 function ocultarDiv() {
