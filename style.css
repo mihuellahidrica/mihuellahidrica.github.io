@@ -111,7 +111,7 @@ body, html {
 
 .accordion-body {
     background: #f1f8f4; /* fondo claro solo para el cuerpo */
-    color: #2e7d32;
+    color: #0d0d0d;
     padding: 18px;
     font-size: 15px;
     border-top: 1px solid #cce3d3;
