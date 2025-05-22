@@ -205,11 +205,11 @@ function generar() {
     document.getElementById('item2').hidden = true;
     document.getElementById('divResultado').hidden = false;
     document.getElementById('divPrincipal').hidden = true;
-    document.getElementById('resultadoAzul').innerHTML = 'Total: ' + huellaAzul + '   ha/m3';
-    document.getElementById('resultadoVerde').innerHTML = 'Total: ' + huellaverde + '   ha/m3';
-    document.getElementById('resultadoGris').innerHTML = 'Total: ' + huellagris + '   ha/m3';
-    document.getElementById('spanResultado').innerHTML = '' + huellatotal + '   ha/m3';
-    document.getElementById("spanResultado").value = huellatotal + '   ha/m3';
+    document.getElementById('resultadoAzul').innerHTML = 'Total: ' + huellaAzul + '   m3/ha';
+    document.getElementById('resultadoVerde').innerHTML = 'Total: ' + huellaverde + '  m3/ha';
+    document.getElementById('resultadoGris').innerHTML = 'Total: ' + huellagris + '   m3/ha';
+    document.getElementById('spanResultado').innerHTML = '' + huellatotal + '    m3/ha';
+    document.getElementById("spanResultado").value = huellatotal + '   m3/ha';
    
     if(huellagris>0){
         document.getElementById('item1').hidden = false;
