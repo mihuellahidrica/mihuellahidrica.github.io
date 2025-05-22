@@ -257,7 +257,7 @@ function Recomendaciones() {
 
     document.getElementById('contentModal').innerHTML = `
         <div class="modal-content-custom">
-            <p class="modal-subtitle">Opciones disponibles a los agricultores para reducir su huella hídrica</p>
+            <p class="modal-subtitle">Indicaciones para entender tu huella </p>
             <strong>HHgris ≤ 0:</strong><br>
             indica que no se requiere agua adicional para diluir contaminantes generados por las actividades.
             <br><strong>HHverde > HHazul: </strong> Cuando la huella verde es mayor que la huella azul, 
