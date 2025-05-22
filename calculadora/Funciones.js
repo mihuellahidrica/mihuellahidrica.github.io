@@ -160,11 +160,11 @@ function calcularhuellatotal(huellaAzul, huellaverde, huellagris) {
     porcentajeverde = Number(porcentajeverde.toFixed(2));
     var porcentajegris = ((huellagris * 100) / huellatotal);
     porcentajegris = Number(porcentajegris.toFixed(2));
-    var totalenlitroazul = (huellaAzul / 1000);
+    var totalenlitroazul = (huellaAzul * 1000);
     totalenlitroazul = Number(totalenlitroazul.toFixed(2));
-    var totalenlitroverde = (huellaverde / 1000);
+    var totalenlitroverde = (huellaverde * 1000);
     totalenlitroverde = Number(totalenlitroverde.toFixed(2));
-    var totalenlitrogris = (huellagris / 1000);
+    var totalenlitrogris = (huellagris * 1000);
     totalenlitrogris = Number(totalenlitrogris.toFixed(2));
     var progressAzul = document.getElementById("progressAzul");
     progressAzul.style.width = "" + porcentajeazul + "%";
@@ -173,11 +173,11 @@ function calcularhuellatotal(huellaAzul, huellaverde, huellagris) {
     var progressGris = document.getElementById("progressGris");
     progressGris.style.width = "" + porcentajegris + "%";
     document.getElementById('porcentajeAzul').innerHTML = ' Porcentaje= ' + porcentajeazul + ' %';
-    document.getElementById('TotalLitros').innerHTML = 'total en litros= ' + totalenlitroazul + ' ha/l';
+    document.getElementById('TotalLitros').innerHTML = 'total en litros= ' + totalenlitroazul + ' l/ha';
     document.getElementById('porcentajeVerde').innerHTML = ' Porcentaje= ' + porcentajeverde + ' %';
-    document.getElementById('TotalLitrosverde').innerHTML = 'total en litros= ' + totalenlitroverde + ' ha/l';
+    document.getElementById('TotalLitrosverde').innerHTML = 'total en litros= ' + totalenlitroverde + 'l/ha';
     document.getElementById('porcentajeGris').innerHTML = 'Porcentaje=  ' + porcentajegris + ' %';
-    document.getElementById('TotalLitrosgris').innerHTML = ' total en litros=' + totalenlitrogris + ' ha/l';
+    document.getElementById('TotalLitrosgris').innerHTML = ' total en litros=' + totalenlitrogris + ' l/ha';
 }
 
 function generar() {
@@ -210,19 +210,19 @@ function generar() {
     document.getElementById('resultadoGris').innerHTML = 'Total: ' + huellagris + '   m3/ha';
     document.getElementById('spanResultado').innerHTML = '' + huellatotal + '    m3/ha';
     document.getElementById("spanResultado").value = huellatotal + '   m3/ha';
-   
-    if(huellagris>0){
+
+    if (huellagris > 0) {
         document.getElementById('item1').hidden = false;
     }
 
-    if(huellaAzul<huellagris){
+    if (huellaAzul < huellagris) {
         document.getElementById('item2').hidden = false;
     }
 
-    if(huellaverde<huellaAzul){
+    if (huellaverde < huellaAzul) {
         document.getElementById('item').hidden = false;
     }
-    
+
 }
 
 function ocultarDiv() {
@@ -256,14 +256,29 @@ function Recomendaciones() {
         </h1>`;
 
     document.getElementById('contentModal').innerHTML = `
-        <p style="font-size: 70%;">Opciones disponibles a los agricultores para reducir su huella hídrica</p>
-        <strong> Huella hídrica verde:</strong>
-        Aumentar la productividad del suelo en agricultura de secado mejorando las prácticas agrícolas,
-        como la lluvia en el suelo se mantiene constante, su productividad aumentará y la huella hídrica verde disminuirá.
-        <br><strong>Huella hídrica azul: </strong>Cambiar a una técnica de riego con menor perdida por evaporación elegir
-            un nuevo cultivo u otra variedad que se adapte mejor al clima regional que necesite menos riego. 
-            Aumentar la productividad del agua azul, en ez de maximizar la productividad del suelo.`;
-}
+        <div class="modal-content-custom">
+            <p class="modal-subtitle">Opciones disponibles a los agricultores para reducir su huella hídrica</p>
+            <strong>HHgris ≤ 0:</strong><br>
+            indica que no se requiere agua adicional para diluir contaminantes generados por las actividades.
+            <br><strong>HHverde > HHazul: </strong> Cuando la huella verde es mayor que la huella azul, 
+            significa que la mayor parte del agua utilizada por el cultivo proviene de la lluvia o agua almacenada en el suelo, 
+            y no tanto de fuentes de agua artificial (ríos o los pozos). Esto es positivo, ya que depende menos de recursos hídricos 
+            gestionados por el agricultor.
+            <br><br><strong>HHverde < HHazul :</strong> Cuando la huella verde es menor que la azul, se observa que el cultivo depende significativamente de
+            la extracción de agua de fuentes superficiales o subterráneas para riego.
+            <br><br><strong>HHverde > HHgris:</strong> cuando la huella verde es mayor
+            que la gris, esto indica que el cultivo usa principalmente agua de lluvia, y no se requiere una gran cantidad de agua
+            para diluir contaminantes generados por el uso de fertilizantes o pesticidas.
+            <br><strong>HHverde < HHgris :</strong> Cuando la huella verde es menor que la gris,
+            puede indicar que el cultivo depende menos del agua de lluvia y más de fuentes de agua externas, pero al mismo tiempo,
+            se están utilizando insumos agrícolas que generan una mayor contaminación del agua.
+            <br><strong>HHazul > HHgris:</strong> Si la huella azul es mayor que la gris, significa que el agua extraída para 
+            el riego es más significativa que el impacto generado por los contaminantes en el agua.
+            <br><br><strong>Si la huella gris supera la huella azul:</strong>  refleja que el impacto de la contaminación del 
+            agua por el uso de insumos agrícolas es mayor que la cantidad de agua extraída para el riego.
+        </div>`;
+
+        }
 
 function tiposHuellas() {
     document.getElementById('contentTitleModal').innerHTML = `<h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Tipos de huellas </strong></h1>`;

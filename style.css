@@ -120,3 +120,26 @@ body, html {
 .accordion-button:focus {
     box-shadow: none;
 }
+.modal-content-custom {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content-custom strong {
+  color: #1a73e8;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.modal-subtitle {
+  font-size: 90%;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #555;
+}
