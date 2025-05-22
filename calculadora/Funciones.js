@@ -210,12 +210,12 @@ function generar() {
     document.getElementById('resultadoGris').innerHTML = 'Total: ' + huellagris + '   ha/m3';
     document.getElementById('spanResultado').innerHTML = '' + huellatotal + '   ha/m3';
     document.getElementById("spanResultado").value = huellatotal + '   ha/m3';
-
+   
     if(huellagris>0){
         document.getElementById('item1').hidden = false;
     }
 
-    if(huellaAzul>huellagris){
+    if(huellaAzul<huellagris){
         document.getElementById('item2').hidden = false;
     }
 
